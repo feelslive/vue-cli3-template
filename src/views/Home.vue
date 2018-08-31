@@ -7,12 +7,21 @@
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import HelloWorld from "@/components/HelloWorld.vue";
+import API from "../api/index";
 
 export default {
-  name: 'home',
+  name: "home",
   components: {
     HelloWorld
+  },
+  created() {
+    let param = { page: 1 };
+    API.login({
+      params: param
+    }).then(res => {
+      console.log(res);
+    });
   }
-}
+};
 </script>
