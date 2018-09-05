@@ -1,0 +1,1 @@
+export const GLOBAL_BGCOLOR = "GLOBAL_BGCOLOR"
